@@ -20,6 +20,10 @@ namespace eShopSolution.Data.Configurations
             builder.HasOne(reftable => reftable.Product) //reference table
                 .WithMany(table => table.Carts) //fk table
                 .HasForeignKey(x => x.ProductId); //set fk for fk table
+            builder.HasOne(reftable => reftable.AppUser) //reference table
+                .WithMany(table => table.Carts) //fk table
+                .HasForeignKey(x => x.UserId); //set fk for fk table
+
         }
     }
 }
