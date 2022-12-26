@@ -32,6 +32,11 @@ namespace eShopSolution.Data.Configurations
             builder.Property(x => x.ShipPhoneNumber)
                 .IsRequired()
                 .HasMaxLength(200);
+
+            //FK
+            builder.HasOne(reftable => reftable.AppUser) //reference table
+                .WithMany(table => table.Orders) //fk table
+                .HasForeignKey(fk => fk.UserId); //set fk for fk table
         }
     }
 }
