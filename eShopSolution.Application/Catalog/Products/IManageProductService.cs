@@ -1,9 +1,8 @@
-﻿using eShopSolution.ViewModels.Catalog;
-using eShopSolution.Application.Dtos;
-using System.Threading.Tasks;
-using eShopSolution.ViewModels.Catalog.Products.Manage;
+﻿using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
+using eShopSolution.ViewModels.Catalog.Products;
+using eShopSolution.ViewModels.Common;
 
 namespace eShopSolution.Application.Catalog.Products
 {
@@ -22,7 +21,7 @@ namespace eShopSolution.Application.Catalog.Products
         Task AddViewCount(int productId);
 
         Task<PagedResult<ProductViewModel>> 
-            GetAllPaging(GetProductPagingRequest request);
+            GetAllPaging(GetManageProductPagingRequest request);
 
         Task<int> AddImages(int productId, List<IFormFile> files);
 
