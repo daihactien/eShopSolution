@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eShopSolution.Application.Common
 {
-    public class FileStorageService
+    public class FileStorageService : IStorageService
     {
         private readonly string _userContentFolder;
         private const string USER_CONTENT_FOLDER_NAME = "user-content";
