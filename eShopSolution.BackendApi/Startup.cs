@@ -69,8 +69,8 @@ namespace eShopSolution.BackendApi
 
             //services.AddControllersWithViews();
             services.AddControllers().AddFluentValidation(fv =>
-                fv.RegisterValidatorsFromAssemblyContaining<
-                    LoginRequestValidator>()); ;
+                fv.RegisterValidatorsFromAssemblyContaining
+                <LoginRequestValidator>());
 
             //Swagger
             services.AddSwaggerGen(c =>
